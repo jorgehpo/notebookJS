@@ -3,6 +3,6 @@ function draw_circle(id, data){
     .append("div")
     .style("width", "50px")
     .style("height", "50px")
-    .style("background-color", "#00CCCC")
+    .style("background-color", data.color)
     .style("border-radius", "50px")
 }
