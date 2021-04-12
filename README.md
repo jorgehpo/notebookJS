@@ -9,6 +9,16 @@
 
 *notebookJS* enables the execution of custom JavaScript code in Python Notebooks (Jupyter Notebook and Google Colab). This Python library can be useful for implementing and reusing  interactive Data Visualizations in Notebook environments.
 
+## Install
+
+To install, run:
+`pip install notebookjs`
+
+Or clone this repository and run:
+`python setup.py install`
+
+## Usage
+
 ![Radial Bar Chart](https://raw.githubusercontent.com/jorgehpo/notebookJS/main/Images/example_radial_bar.png)
 **Figure 1**: Radial Bar Chart of an energy consumption dataset. Adapted from this [bl.ock](https://bl.ocks.org/AntonOrlov/6b42d8676943cc933f48a43a7c7e5b6c). See [Examples/3_RadialBarChart](https://github.com/jorgehpo/notebookJS/blob/main/Examples/3_RadialBarChart/).
 
