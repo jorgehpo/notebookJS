@@ -8,7 +8,7 @@ setup(
     version="0.1.1",
     author="Jorge Piazentin Ono, Juliana Freire, Claudio Silva",
     author_email="jorgehpo@nyu.edu",
-    description="notebookJS library - easy bidirectional communication between python and javascript",
+    description="notebookJS library - Seamless JavaScript integration in Python Notebooks",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/jorgehpo/notebookJS",
