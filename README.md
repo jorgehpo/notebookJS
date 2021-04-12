@@ -50,13 +50,36 @@ execute_js(
 
 ## Examples
 
-For examples, please see the [Examples/](https://github.com/jorgehpo/notebookJS/blob/main/Examples/) folder.
+### Radial Bar Chart - Running D3 code in the Notebook
 
+Plotting a Radial Bar Chart with data loaded from Python. See [Examples/3_RadialBarChart](https://github.com/jorgehpo/notebookJS/blob/main/Examples/3_RadialBarChart/).
 
+```Python
+# Loading libraries
+d3_lib_url = "https://d3js.org/d3.v3.min.js"
+
+with open("radial_bar.css", "r") as f:
+    radial_bar_css = f.read()
+    
+with open ("radial_bar_lib.js", "r") as f:
+    radial_bar_lib = f.read()
+
+# Loading data
+import pandas as pd
+energy = pd.read_csv("energy.csv")
+
+# Plotting the Radial Bar Chart
+from notebookjs import execute_js
+execute_js(library_list=[d3_lib_url, radial_bar_lib], main_function="radial_bar", 
+             data_dict=energy.to_dict(orient="records"), css_list=[radial_bar_css])
+```
 
 ![Radial Bar Chart](https://raw.githubusercontent.com/jorgehpo/notebookJS/main/Images/example_radial_bar.png)
-**Figure 1**: Radial Bar Chart of an energy consumption dataset. Adapted from this [bl.ock](https://bl.ocks.org/AntonOrlov/6b42d8676943cc933f48a43a7c7e5b6c). See [Examples/3_RadialBarChart](https://github.com/jorgehpo/notebookJS/blob/main/Examples/3_RadialBarChart/).
+Radial Bar Chart of an energy consumption dataset. Adapted from this [bl.ock](https://bl.ocks.org/AntonOrlov/6b42d8676943cc933f48a43a7c7e5b6c). 
 
+### More examples
+
+Please see the [Examples/](https://github.com/jorgehpo/notebookJS/blob/main/Examples/) folder for more examples.
 
 ## Reference
 
