@@ -1,0 +1,2 @@
+include notebookjs/resources/CommAPI.js
+include notebookjs/resources/template.html
