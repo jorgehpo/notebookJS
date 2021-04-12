@@ -1,6 +1,11 @@
 # notebookJS: seamless JavaScript integration in Python Notebooks 
 
-![logo](https://raw.githubusercontent.com/jorgehpo/notebookJS/main/Images/notebookJS.png)
+<img src="https://raw.githubusercontent.com/jorgehpo/notebookJS/main/Images/notebookJS.png" 
+     align="left" 
+     hspace="10" 
+     vspace="6"
+     width="100"
+     height="120">
 
 *notebookJS* enables the execution of custom JavaScript code in Python Notebooks (Jupyter Notebook and Google Colab). This Python library can be useful for implementing and reusing  interactive Data Visualizations in Notebook environments.
 
