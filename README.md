@@ -35,17 +35,17 @@ execute_js(
 ```
 
 **Parameters**
-- library_list : list of str
+- library_list : list of str. 
     List of strings containing either 1) URL to a javascript library, 2) javascript code
-- main_function : str
+- main_function : str. 
     Name of the main function to be called. The function will be called with two parameters: 
     <div_id>, for example "#my_div", and <data_dict>.
-- data_dict : dict
+- data_dict : dict. 
     Dictionary containing the data to be passed to <main_function>
-- callbacks : dict
+- callbacks : dict. 
     Dictionary of the form {<callback_str_id> : <python_function>}. The javascript library can
     use callbacks to talk to python.
-- css_list : list of str
+- css_list : list of str. 
     List of strings containing either 1) URL to a CSS stylesheet or 2) CSS styles
 
 ## Examples
