@@ -35,6 +35,7 @@ execute_js(
 ```
 
 **Parameters**
+
 - library_list : list of str. 
     List of strings containing either 1) URL to a javascript library, 2) javascript code
 - main_function : str. 
@@ -49,6 +50,7 @@ execute_js(
     List of strings containing either 1) URL to a CSS stylesheet or 2) CSS styles
 
 **Main Function**
+
 *main_function* is the javascript function that will be run when execute_js is called. It has the following signature:
 ```Javascript
 function main_function(div_id, data_dict)
@@ -72,7 +74,7 @@ function draw_circle(div_id, data){
 
 **Callbacks**
 
-The *callbacks* input is a dictionary that maps an identifier string to a Python function. Data is passed to/from callbacks using json/dicts.
+*callbacks* contains a dictionary that maps an identifier string to a Python function. Data is passed to/from callbacks using json/dicts.
 
 For example, the following callback computes the number to the power of 2.
 
@@ -99,6 +101,7 @@ comm.call({n: 3})
 // An alert will be shown with the message: "The returned value is 9"
 ```
 
+Jupyter Notebook and Google Colab have different APIs for sending data to/from Javascript/Python. *CommAPI* abstracts the different APIs in a single convenient class.
 
 ## Examples
 
@@ -127,6 +130,7 @@ execute_js(library_list=[d3_lib_url, radial_bar_lib], main_function="radial_bar"
 ```
 
 ![Radial Bar Chart](https://raw.githubusercontent.com/jorgehpo/notebookJS/main/Images/example_radial_bar.png)
+
 Radial Bar Chart of an energy consumption dataset. Adapted from this [bl.ock](https://bl.ocks.org/AntonOrlov/6b42d8676943cc933f48a43a7c7e5b6c). 
 
 ### More examples
