@@ -70,6 +70,36 @@ function draw_circle(div_id, data){
 }
 ```
 
+**Callbacks**
+
+The *callbacks* input is a dictionary that maps an identifier string to a Python function. Data is passed to/from callbacks using json/dicts.
+
+For example, the following callback computes the number to the power of 2.
+
+``` Python
+def compute_power_2(data){
+    n = data.n
+    n2 = n**2
+    return {"power2": n2}
+}
+
+callbacks = {
+    "compute_power_2": compute_power_2
+}
+
+execute_js(..., callbacks=callbacks)
+```
+
+In Javascript, we can call this callback with the class *CommAPI*. *CommAPI* is automatically injected in the Javascript 
+
+``` Javascript
+let comm = new CommAPI("compute_power_2", (ret)=>{alert("The returned value is " + ret.power2)})
+
+comm.call({n: 3}) 
+// An alert will be shown with the message: "The returned value is 9"
+```
+
+
 ## Examples
 
 ### Radial Bar Chart - Running D3 code in the Notebook
