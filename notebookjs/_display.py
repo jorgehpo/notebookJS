@@ -4,7 +4,7 @@ import pkg_resources
 import random
 import re
 import json
-from _comm import setup_comm_api
+from ._comm import setup_comm_api
 
 def id_generator(size=15):
     """Helper function to generate random div ids."""

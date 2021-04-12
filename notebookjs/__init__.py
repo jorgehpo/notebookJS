@@ -1,1 +1,1 @@
-from _display import execute_js
+from ._display import execute_js
