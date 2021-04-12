@@ -48,6 +48,29 @@ execute_js(
 - css_list : list of str. 
     List of strings containing either 1) URL to a CSS stylesheet or 2) CSS styles
 
+**Main Function**
+*main_function* is the javascript function that will be run when execute_js is called. It has the following signature:
+```Javascript
+function main_function(<div_id>, <data_dict>)
+```
+
+**Example of Main Function**
+
+This function uses D3 to add a circular div in the output cell:
+
+```Javascript
+function draw_circle(div_id, data){
+    // Function that draws a circle of color <data.color> inside the div <div_id> using D3
+    
+    d3.select(id)
+    .append("div")
+    .style("width", "50px")
+    .style("height", "50px")
+    .style("background-color", data.color)
+    .style("border-radius", "50px")
+}
+```
+
 ## Examples
 
 ### Radial Bar Chart - Running D3 code in the Notebook
