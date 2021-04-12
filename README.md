@@ -7,9 +7,9 @@
      width="100"
      height="120">
 
-*notebookJS* enables the execution of custom JavaScript code in Python Notebooks (Jupyter Notebook and Google Colab). This Python library can be useful for implementing and reusing  interactive Data Visualizations in Notebook environments.
+*notebookJS* enables the execution of custom JavaScript code in Python Notebooks (Jupyter Notebook and Google Colab). This Python library can be useful for implementing and reusing  interactive Data Visualizations in the Notebook environment.
 
-*notebookJS* supports bidirectional communication between Python and JavaScript. User interactions in HTML/JavaScript can trigger Python callbacks that process data on demand and send the results back to the front-end code.
+*notebookJS* takes care of downloading and handling Javascript libraries and CSS stylesheets from the web. Furthermore, it supports bidirectional communication between Python and JavaScript. User interactions in HTML/JavaScript can trigger Python callbacks that process data on demand and send the results back to the front-end code.
 
 
 ## Install
@@ -90,7 +90,7 @@ callbacks = {
 execute_js(..., callbacks=callbacks)
 ```
 
-In Javascript, we can call this callback with the class *CommAPI*. *CommAPI* is automatically injected in the Javascript 
+In Javascript, we can call this callback with the class *CommAPI*. *CommAPI* is automatically injected in the Javascript by *notebookJS*.
 
 ``` Javascript
 let comm = new CommAPI("compute_power_2", (ret)=>{alert("The returned value is " + ret.power2)})
