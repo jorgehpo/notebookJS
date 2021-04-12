@@ -142,3 +142,17 @@ Please see the [Examples/](https://github.com/jorgehpo/notebookJS/blob/main/Exam
 If you use *notebookJS*, please reference the following work:
 
 "*Interactive Data Visualization in Jupyter Notebooks*. JP Ono, J Freire, CT Silva - Computing in Science & Engineering, 2021"
+
+Bibtex:
+```
+@article{ono2021interactive,
+  title={Interactive Data Visualization in Jupyter Notebooks},
+  author={Ono, Jorge Piazentin and Freire, Juliana and Silva, Claudio T},
+  journal={Computing in Science \& Engineering},
+  volume={23},
+  number={2},
+  pages={99--106},
+  year={2021},
+  publisher={IEEE}
+}
+```
