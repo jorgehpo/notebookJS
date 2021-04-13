@@ -46,7 +46,7 @@ execute_js(
 **Parameters**
 
 - library_list : list of str. 
-    List of strings containing either 1) URL to a javascript library, 2) javascript code
+    List of strings containing either 1) URL to a javascript library, 2) javascript code, 3) javascript [bundle](https://github.com/jorgehpo/notebookJS/tree/main/Examples/5_Webpack_BaseballAnnotator_Bidirectional)
 - main_function : str. 
     Name of the main function to be called. The function will be called with two parameters: 
     <div_id>, for example "#my_div", and <data_dict>.
