@@ -173,7 +173,7 @@ execute_js(library_list=[d3_lib_url, radial_bar_lib], main_function="radial_bar"
              data_dict=energy.to_dict(orient="records"), css_list=[radial_bar_css])
 ```
 
-![Radial Bar Chart](https://raw.githubusercontent.com/jorgehpo/notebookJS/main/Images/example_radial_bar.png)
+![Radial Bar Chart](https://user-images.githubusercontent.com/14821895/114483438-536ea980-9bd6-11eb-8502-77f7a8864322.gif)
 
 Radial Bar Chart of an energy consumption dataset. Adapted from this [bl.ock](https://bl.ocks.org/AntonOrlov/6b42d8676943cc933f48a43a7c7e5b6c). 
 
