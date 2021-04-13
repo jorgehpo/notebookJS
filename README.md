@@ -144,7 +144,7 @@ def hello_world_random(data):
       "Geiá sou Kósme", # Greek
       "Kon'nichiwa sekai", # Japanese
       "Hallo Welt", # German
-      "namaste duniya" #Hindi
+      "Namaste duniya" #Hindi
   ]
   i = random.randint(0, len(hello_world_languages)-1)
   return {'text': hello_world_languages[i]}
