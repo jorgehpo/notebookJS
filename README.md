@@ -145,7 +145,7 @@ from notebookjs import execute_js
 execute_js(helloworld_js, "helloworld", callbacks={"get_hello": hello_world_random})
 ```
 
-<iframe src="https://giphy.com/embed/6Bqu1qSTd5aGmDJEGI" width="480" height="56" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/6Bqu1qSTd5aGmDJEGI">via GIPHY</a></p>
+<img src="https://media.giphy.com/media/6Bqu1qSTd5aGmDJEGI/giphy.gif" width="480" height="56"/>
 
 See this [colab notebook](https://colab.research.google.com/drive/1g8WOn9oZ5G_3-Y8DYmpV1MIj59dnd81u?usp=sharing) for a live demo.
 
