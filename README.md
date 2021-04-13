@@ -145,7 +145,7 @@ from notebookjs import execute_js
 execute_js(helloworld_js, "helloworld", callbacks={"get_hello": hello_world_random})
 ```
 
-<img src="https://media.giphy.com/media/6Bqu1qSTd5aGmDJEGI/giphy.gif" width="960" height="112"/>
+![Colab output](https://user-images.githubusercontent.com/14821895/114482788-2d94d500-9bd5-11eb-9ec3-7ee5c5d62a86.gif)
 
 See this [colab notebook](https://colab.research.google.com/drive/1g8WOn9oZ5G_3-Y8DYmpV1MIj59dnd81u?usp=sharing) for a live demo.
 
