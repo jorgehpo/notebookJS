@@ -105,6 +105,50 @@ Jupyter Notebook and Google Colab have different APIs for sending data to/from J
 
 ## Examples
 
+### Hello World - Python Callbacks
+
+In this example, we show how to display "hello world" in multiple languages using Javascript and Python. The Javascript is responsible for updating the front end and requesting a new message from Python. Python returns a random message every time the callback is invoked.
+
+**Javascript to update the div with a hello world message**
+```Python
+helloworld_js = """
+function helloworld(div_id, data){
+    comm = new CommAPI("get_hello", (ret) => {
+      document.querySelector(div_id).textContent = ret.text;
+    });
+    setInterval(() => {comm.call({})}, 1000);
+    comm.call({});
+}
+"""
+```
+
+**Defining the Python Callback**
+```Python
+import random
+def hello_world_random(data):
+  hello_world_languages = [
+      "Ola Mundo", # Portuguese
+      "Hello World", # English
+      "Hola Mundo", # Spanish
+      "Geiá sou Kósme", # Greek
+      "Kon'nichiwa sekai", # Japanese
+      "Hallo Welt", # German
+      "namaste duniya" #Hindi
+  ]
+  i = random.randint(0, len(hello_world_languages)-1)
+  return {'text': hello_world_languages[i]}
+```
+
+**Invoking the function helloworld in notebook**
+```Python
+from notebookjs import execute_js
+execute_js(helloworld_js, "helloworld", callbacks={"get_hello": hello_world_random})
+```
+
+<iframe src="https://giphy.com/embed/6Bqu1qSTd5aGmDJEGI" width="480" height="56" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/6Bqu1qSTd5aGmDJEGI">via GIPHY</a></p>
+
+See this [colab notebook](https://colab.research.google.com/drive/1g8WOn9oZ5G_3-Y8DYmpV1MIj59dnd81u?usp=sharing) for a live demo.
+
 ### Radial Bar Chart - Running D3 code in the Notebook
 
 Plotting a Radial Bar Chart with data loaded from Python. See [Examples/3_RadialBarChart](https://github.com/jorgehpo/notebookJS/blob/main/Examples/3_RadialBarChart/).
