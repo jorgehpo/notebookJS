@@ -116,9 +116,9 @@ Jupyter Notebook and Google Colab have different APIs for sending data to/from J
 
 ### Hello World - Python Callbacks
 
-![Hello World Output Gif](https://user-images.githubusercontent.com/14821895/114482788-2d94d500-9bd5-11eb-9ec3-7ee5c5d62a86.gif)
-
 In this example, we show how to display "hello world" in multiple languages using Javascript and Python. The Javascript is responsible for updating the front end and requesting a new message from Python. Python returns a random message every time the callback is invoked.
+
+![Hello World Output Gif](https://user-images.githubusercontent.com/14821895/114482788-2d94d500-9bd5-11eb-9ec3-7ee5c5d62a86.gif)
 
 **Javascript to update the div with a hello world message**
 ```Python
