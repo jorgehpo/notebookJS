@@ -11,6 +11,8 @@
 
 *notebookJS* takes care of downloading and handling Javascript libraries and CSS stylesheets from the web. Furthermore, it supports bidirectional communication between Python and JavaScript. User interactions in HTML/JavaScript can trigger Python callbacks that process data on demand and send the results back to the front-end code.
 
+Implementation details in [our paper](https://ieeexplore.ieee.org/document/9391750).
+
 
 ## Install
 
