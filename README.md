@@ -2,7 +2,7 @@
 
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![Open In Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1g8WOn9oZ5G_3-Y8DYmpV1MIj59dnd81u?usp=sharing)
-[![PyPI version](https://badge.fury.io/py/notebookjs.svg)](https://badge.fury.io/py/notebookjs)
+[![PyPI version](https://badge.fury.io/py/notebookjs.svg)](https://pypi.org/project/notebookjs)
 <!--- PyPI badge made with https://badge.fury.io/for/py/notebookjs --->
 
 <img src="https://raw.githubusercontent.com/jorgehpo/notebookJS/main/Images/notebookJS.png" 
