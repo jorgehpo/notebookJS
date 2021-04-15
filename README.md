@@ -18,6 +18,8 @@
 
 Implementation details in [our paper](https://ieeexplore.ieee.org/document/9391750).
 
+See our [blog post](https://jorgehpo.medium.com/introducing-notebookjs-seamless-integration-between-python-and-javascript-in-computational-e654ec3fbd18).
+
 [![ScatterPlot](https://user-images.githubusercontent.com/14821895/114492279-478ae380-9be6-11eb-8750-30ec3a206816.gif)](https://github.com/jorgehpo/notebookJS/tree/main/Examples/7_D3_scatterplot)
 
 
