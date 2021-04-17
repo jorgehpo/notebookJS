@@ -13,6 +13,29 @@ def id_generator(size=15):
 
 def make_html(library_list, main_function, parameter_dict, css_list):
     """Makes the HTML that will be added to the Notebook"""
+    # Loading Python CommAPI
+    comm_api_path = pkg_resources.resource_filename(__name__, "resources/CommAPI.js")
+    with open(comm_api_path, "r") as f:
+        comm_api_js = f.read()
+
+    # Making sure library_list and css_list are lists.
+    if type(library_list) is not list: 
+        library_list = [library_list]
+    if type(css_list) is not list:
+        css_list = [css_list]
+    
+    # Downloading web resources
+    for idx in range(len(library_list)):
+        if check_url(library_list[idx]):
+            library_list[idx] = download_url(library_list[idx])
+    for idx in range(len(css_list)):
+        if check_url(css_list[idx]):
+            css_list[idx] = download_url(css_list[idx])
+
+    # Adding CommAPI to library_list 
+    library_list.insert(0, comm_api_js)
+
+    # Generating HTML
     div_id = id_generator()
     library_bundle = '\n\n'.join(library_list)
     css_bundle = '\n'.join(css_list)
@@ -47,6 +70,36 @@ def download_url(url):
     r = requests.get(url, headers=headers, stream=False)
     return r.content.decode("utf-8") 
 
+
+
+def save_html(html_dest, library_list, main_function, data_dict = {}, callbacks = None, css_list=[]):
+    """Saves the bundled code (output of execute_js) to an HTML file
+
+    Parameters
+    ----------
+    html_dest : str
+        Path to the output HTML dest file. Example: "./output.html"
+    library_list : list of str
+        List of strings containing either 1) URL to a javascript library, 2) javascript code
+    main_function : str
+        Name of the main function to be called. The function will be called with two parameters: 
+        <div_id>, for example "#my_div", and <data_dict>.
+    data_dict : dict
+        Dictionary containing the data to be passed to <main_function>
+    callbacks : dict
+        Dictionary of the form {<callback_str_id> : <python_function>}. The javascript library can
+        use callbacks to talk to python.
+    css_list : list of str
+        List of strings containing either 1) URL to a CSS stylesheet or 2) CSS styles
+    """
+    if callbacks is not None:
+        print ("Warning: Python callbacks do not work in standalone HTML file.")
+        print ("Saving file...")
+
+    html_all = make_html(library_list, main_function, data_dict, css_list)
+    with open(html_dest, "w") as f:
+        f.write(html_all)
+
 def execute_js(library_list, main_function, data_dict = {}, callbacks = {}, css_list=[]):
     """Executes a javascript function that can add content to an output div
 
@@ -65,24 +118,6 @@ def execute_js(library_list, main_function, data_dict = {}, callbacks = {}, css_
     css_list : list of str
         List of strings containing either 1) URL to a CSS stylesheet or 2) CSS styles
     """
-    comm_api_path = pkg_resources.resource_filename(__name__, "resources/CommAPI.js")
-    with open(comm_api_path, "r") as f:
-        comm_api_js = f.read()
-
-    if type(library_list) is not list: 
-        library_list = [library_list]
-    if type(css_list) is not list:
-        css_list = [css_list]
-    library_list.insert(0, comm_api_js)
-    
-    for idx in range(len(library_list)):
-        if check_url(library_list[idx]):
-            library_list[idx] = download_url(library_list[idx])
-    
-    for idx in range(len(css_list)):
-        if check_url(css_list[idx]):
-            css_list[idx] = download_url(css_list[idx])
-
     html_all = make_html(library_list, main_function, data_dict, css_list)
     for callback_id in callbacks.keys():
         setup_comm_api(callback_id, callbacks[callback_id])

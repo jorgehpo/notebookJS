@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="notebookjs",
-    version="0.1.3",
+    version="0.1.4",
     author="Jorge Piazentin Ono, Juliana Freire, Claudio Silva",
     author_email="jorgehpo@nyu.edu",
     description="notebookJS library - Seamless JavaScript integration in Python Notebooks",
