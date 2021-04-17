@@ -33,7 +33,8 @@ Or clone this repository and run:
 
 ## API
 
-The *notebookJS* API consists of a single method: *execute_js*. This method executes a javascript function and sets up the infrastructure for bidirectional communication between Python and Javascript using callbacks. 
+### execute_js
+This method executes a javascript function and sets up the infrastructure for bidirectional communication between Python and Javascript using callbacks. 
 
 ```python
 execute_js(
@@ -113,6 +114,22 @@ comm.call({n: 3})
 ```
 
 Jupyter Notebook and Google Colab have different APIs for sending data to/from Javascript/Python. *CommAPI* abstracts the different APIs in a single convenient class.
+
+### save_html
+This method creates a standalone HTML bundle (containing all data, JS and CSS resources) and saves it to disk. It accepts all parameters of execute_js, with the addition of *html_dest*, the path to the output file. For example, *html_dest="./output.html"*
+
+```python
+save_html(,
+    html_dest,
+    library_list,
+    main_function,
+    data_dict={},
+    callbacks=None,
+    css_list=[],
+)
+```
+
+**Warning:** callbacks do not work in standalone HTML files. This parameter only exists to make *execute_js* and *save_html* interoperable.
 
 ## Examples
 
