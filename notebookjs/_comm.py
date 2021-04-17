@@ -1,4 +1,6 @@
 from IPython.core.display import display, HTML, Javascript
+from IPython import get_ipython
+
 
 def setup_comm_colab(api_call_id, callback):
     """Function that connects javascript call with a Colab Notebook"""
