@@ -115,6 +115,8 @@ comm.call({n: 3})
 
 Jupyter Notebook and Google Colab have different APIs for sending data to/from Javascript/Python. *CommAPI* abstracts the different APIs in a single convenient class.
 
+**Warning**: Callbacks between Python and JS are only available in Jupyter and Colab notebooks. Jupyter Lab is not supported currently.
+
 ### save_html
 This method creates a standalone HTML bundle (containing all data, JS and CSS resources) and saves it to disk. It accepts all parameters of execute_js, with the addition of *html_dest*, the path to the output file. For example, *html_dest="./output.html"*
 
