@@ -212,7 +212,7 @@ Please see the [Examples/](https://github.com/jorgehpo/notebookJS/blob/main/Exam
 
 ## Reference
 
-If you use *notebookJS*, please reference the following work:
+If you use *notebookJS*, please reference our related work:
 
 "*Interactive Data Visualization in Jupyter Notebooks*. JP Ono, J Freire, CT Silva - Computing in Science & Engineering, 2021"
 
